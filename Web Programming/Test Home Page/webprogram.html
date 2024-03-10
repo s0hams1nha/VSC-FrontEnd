@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Programming</title>
+</head>
+<body background="">
+
+  <div class="container">
+    <div class="left">
+      <p>This page contains</p>
+      <nav>
+        <ul>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Current">Current Discussion</a></li>
+            <li><a href="#Table">Courses</a></li>
+            <li><a href="#Photos">Images</a></li>
+        </ul>
+      </nav>
+      <p>Click these to go to mentioned section!</p>
+      <p style="font-style: italic;">
+        ~Soham Sinha (22BCI0167)
+      </p>
+    </div>
+    <div class="right">
+      <p style="font-size: 50px; font-style: bold;" >Sample Homepage</p>
+    <section id="Introduction">
+      <h2>Introduction to Web Programming</h2>
+      <p>
+        This is my sample homepage.
+      </p>
+    </section>
+    <br>
+    <section id="Current">
+      <h2>Current Discussion</h2>
+      <p>
+        We have covered html tags like the following:
+        <ul>
+          <li>Block Elements</li>
+          <li>Images</li>
+          <li>Lists</li>
+          <li>Text Elements</li>
+          <li>Character references</li>
+          <li>Code-Related Elements</li>
+        </ul>
+      </p>
+    </section>
+    <br>
+    <section id="Table">
+      <h2>Sample Table</h2>
+      <p>
+        This table shows my selected courses and their respective credits.
+      </p>
+      <table style="width:650px; text-align: center;">
+        <th style="width: 75%;">Course</th>
+        <th style="width: 25%;">Credits</th>
+        <tr >
+          <td>Web Programming</td>
+          <td>3 (2+1)</td>
+        </tr>
+        <tr>
+          <td>Design and Analysis of Algorithms</td>
+          <td>4 (3+1)</td>
+        </tr>
+        <tr>
+          <td>Computer Architecture and Organization</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Theory of Computation</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Microprocessors and Microcontrollers</td>
+          <td>4 (3+1)</td>
+        </tr>
+        <tr>
+          <td>Probability and Statistics</td>
+          <td>4 (3+1)</td>
+        </tr>
+        <tr>
+          <td>Quantitative Skills Practice II</td>
+          <td>1.5</td>
+        </tr>
+      </table>
+    </section>
+    <br>
+    <section id="Photos">
+      <h2>Sample Images</h2>
+      <img class="imgs" src="img1.png">
+      <img class="imgs" src="img2.jpg">
+      <img class="imgs" src="img3.jpg">
+    </section>
+    </div>
+  </div>
+    <style>
+      *{
+        font-size: 25px;
+      }
+
+      .container {
+          display: flex;
+          flex-direction: row;
+      }
+      .left {
+          display: block;
+          width: 25%;
+          height: 400px;
+      }
+      .right {
+          display: block;
+          border-left: 2px solid black;
+          padding-left: 50px;
+          width: 75%;
+          height: 100vh;
+          overflow-y: scroll;
+      }
+      
+      table, th, td{
+        border: 1px solid black;
+      }
+      .imgs{
+        width: 400px;
+        height: 280px;
+        object-fit: cover;
+      }
+      
+    </style>
+</body>
+</html>
+
+
+

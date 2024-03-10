@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  display: flex;
+  justify-content: start;
+  background-image: linear-gradient(to right, rgb(56, 235, 255), rgb(55, 255, 138));
+  padding: 15px;
+}
+a{
+  text-decoration: none;
+  padding-right: 15px;
+  transition: 0.5s;
+}

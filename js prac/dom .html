@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+    <style>
+      body{
+        font-family: Arial;
+
+      }
+
+      .sub{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: aliceblue;
+        background-color: black;
+        border: none;
+        font-weight: bold;
+        border-radius: 30px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .sub:hover{
+        opacity: 0.5;
+      }
+
+      .isSubbed{
+        background-color: rgb(240,240,240);
+        color: black;
+      }
+
+      .costinput{
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculatebutton{
+        background-color: green;
+        color: aliceblue;
+        border: none;
+        font-size: 15px;
+        padding: 12px 15px;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>Youtube Subscribe button</p>
+     <button class="sub" onclick="
+      subscribe();
+      ">Subscribe</button>
+      <p>Calculate delivery Cost</p>
+      <p>+$10 if cost is lesser than 40</p>
+      <input class="iteminput costinput" placeholder="Cost of Order" onkeydown="
+      if(event.key === 'Enter'){
+        additem();
+      }
+      ">
+      <button class="calculatebutton" onclick="
+      additem();
+      ">Calculate</button>
+      <p class="tcost">$0</p>
+
+    <script>      
+      function subscribe(){
+        const buttonElement= document.querySelector('.sub');
+        if(buttonElement.innerHTML==='Subscribe'){
+          buttonElement.innerHTML= 'Subscribed';
+          buttonElement.classList.add('isSubbed');
+        }else{
+          buttonElement.innerHTML= 'Subscribe';
+          buttonElement.classList.remove('isSubbed');
+        }
+      }
+
+      function additem(){
+        const listitem= document.querySelector('.iteminput');
+        let cost = Number(listitem.value);
+        if(cost<40){
+          cost+=10;
+        }
+        document.querySelector('.tcost')
+          .innerHTML=`$${cost}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload</title>
+</head>
+<body>
+  <h2>Resume and Photograph Submission Form</h2>
+  <form id="jobapplication" enctype="multipart/form-data">
+    <label for="resume"></label>
+    <input type="file" accept=".pdf, .docx, .doc" required  id="resume" name="resume">
+    <br>
+    <br>
+    <label for="photo"></label>
+    <input type="file" name="photo" id="photo" accept=".jpeg, .jpg," required>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById("jobapplication").addEventListener("submit", function(event){
+      event.preventDefault();
+      const resumeFile=document.getElementById("resume").files[0];
+      const photoFile=document.getElementById("photo").files[0];
+      if(resumeFile.size> 500*1024){
+        alert("File size must be less than 500Kb!");
+        return
+      }
+
+      if(photoFile.size> 1000*1024){
+        alert("Photograph file size must be less than 1MB");
+        return 
+      }
+
+      if(!['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(resumeFile.type)){
+        alert("Incorrect file type");
+        return
+      }
+
+      if(!['image/jpeg', 'image/jpg'].includes(photoFile.type)){
+        alert("Incorrect Photo file type!");
+        return
+      }
+
+    alert("Submitted successfully");
+    });
+  </script>
+</body>
+</html>

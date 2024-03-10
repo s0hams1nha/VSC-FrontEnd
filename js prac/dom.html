@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button class="yt" onclick="
+     subscribe();
+    ">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input class='cost' placeholder="Cost of order" onkeydown="
+    submit(event);
+    ">
+    <button onclick="
+    calctotal();
+    ">Calculate</button>
+
+    <p class="totalcost"></p>
+
+    <script>
+      function submit(event){
+        if(event.key==="Enter"){
+          calctotal();
+        }
+      }
+
+      function calctotal(){
+        const inputcost = document.querySelector(".cost");
+        let Cost = Number(inputcost.value);
+
+        if(Cost<=40 && Cost!=0){
+          Cost+=10;
+        }else if(Cost===0){
+          Cost=0;
+        }
+
+        document.querySelector('.totalcost')
+          .innerHTML=`Total is $${Cost}`;        
+      }
+
+      function subscribe(){
+          const ytsub= document.querySelector('.yt');
+          if(ytsub.innerHTML==='Subscribe'){
+            ytsub.innerHTML='Subscribed';
+          }else{
+            ytsub.innerHTML='Subscribe';
+          }
+        }
+    </script>
+  </body>
+</html>

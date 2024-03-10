@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(252, 217, 217);
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+
+}
+.nav{
+  width: 100%;
+  display: block;
+  padding: 15px;
+  height: 80px;
+  align-content: center;
+}
+
+.nav-icon{
+  position: relative;
+  left: 25px;
+  top: 13px;
+  display: inline;
+}
+
+.name{
+  position: relative;
+  top: 3px;
+  left: 35px;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+li{
+  display: inline;
+  margin-right: 50px;
+}
+
+.nav-icon{
+  height: 50px;
+  width: 50px;
+}
+
+.name{
+  display: inline;
+  margin-right: 1260px;
+}
+
+.navbutton{
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.navsignin{
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.container2{
+  display: flex;
+}
+.left{
+  width: 40%;
+  height: 700px;
+  display: inline;
+}
+
+h1{
+  font-size: 100px;
+  position: relative;
+  top: 180px;
+  left: 46px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: inline;
+}
+
+p{
+  font-size: 25px;
+  position: relative;
+  top: 200px;
+  left: 50px;
+  font-family:'Courier New', Courier, monospace;
+  display: block;
+  padding-bottom: 3px;
+}
+
+.inp{
+  position: relative;
+  top: 250px;
+  left: 53px;
+  padding: 20px 30px;
+  width: 450px;
+  font-family:Arial, Helvetica, sans-serif ;
+}
+
+.right{
+  width: 60%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template{
+  position: relative;
+  left: 300px;
+  top: 100px;
+  width: 400px;
+  height: 610px;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0, 20);
+}
+
+.img{
+  border-radius: 20px;
+  height: 610px;
+  width: 400px;
+}

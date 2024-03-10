@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Order Form</title>
+<style>
+  .veg {
+    color: green;
+    font-weight: bold;
+  }
+  .non-veg {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <h2>Food Order Form</h2>
+  <form>
+    <label for="hotelName">Hotel Name:</label>
+    <input type="text" id="hotelName" name="hotelName"><br><br>
+    
+    <label>Food Type:</label><br>
+    <input type="radio" id="veg" name="foodType" value="veg"> <label for="veg">Veg</label>
+    <input type="radio" id="nonVeg" name="foodType" value="nonveg"> <label for="nonVeg">Non-Veg</label><br><br>
+    
+    <label for="foodItems">Food Items:</label><br>
+    <select id="foodItems" name="foodItems" multiple size="5"></select><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+<script>
+  const vegItems = ['Salad', 'Vegetable Curry', 'Paneer Tikka', 'Dal Fry'];
+  const nonVegItems = ['Chicken Curry', 'Fish Fry', 'Mutton Biryani', 'Egg Bhurji'];
+  
+  const foodItemsSelect = document.getElementById('foodItems');
+  const vegRadio = document.getElementById('veg');
+  const nonVegRadio = document.getElementById('nonVeg');
+  
+  function updateFoodItems() {
+    foodItemsSelect.innerHTML = '';
+    const selectedItems = vegRadio.checked ? vegItems : nonVegItems;
+    const itemClass = vegRadio.checked ? 'veg' : 'non-veg';
+    
+    selectedItems.forEach(item => {
+      const option = document.createElement('option');
+      option.textContent = item;
+      option.classList.add(itemClass);
+      foodItemsSelect.appendChild(option);
+    });
+  }
+  
+  vegRadio.addEventListener('change', updateFoodItems);
+  nonVegRadio.addEventListener('change', updateFoodItems);
+</script>
+</body>
+</html>
